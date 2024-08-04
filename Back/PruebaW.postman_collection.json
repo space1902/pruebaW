@@ -1,0 +1,120 @@
+{
+	"info": {
+		"_postman_id": "57c8a23d-489f-4693-9237-b18bf6a0b7c7",
+		"name": "PruebaW",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23306383"
+	},
+	"item": [
+		{
+			"name": "obtener tiket id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/tiket/6",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tiket",
+						"6"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "obtener tiket paginado",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8080/v1/tiket?page=2&size=1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tiket"
+					],
+					"query": [
+						{
+							"key": "page",
+							"value": "2"
+						},
+						{
+							"key": "size",
+							"value": "1"
+						}
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "crear tiket",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 2,\r\n    \"create_date\": \"20/05/2024\",\r\n    \"status\": \"abierto\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/tiket",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tiket"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "editar tiket",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_user\": 4,\r\n    \"update_date\": \"20/03/2024\",\r\n    \"status\": \"cerrado\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8080/v1/tiket/1",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8080",
+					"path": [
+						"v1",
+						"tiket",
+						"1"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
